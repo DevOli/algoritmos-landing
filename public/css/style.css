@@ -1,3 +1,8 @@
+:root {
+  --algoRed: #e2001a;
+  --algoYellow: #feec00;
+  --algoBlue: #004293;
+}
 body,
 html {
   font-family: "Open Sans", sans-serif;
@@ -43,13 +48,13 @@ p.intro {
   line-height: 24px;
 }
 a {
-  color: #608dfd;
+  color: var(--algoBlue);
   font-weight: 400;
 }
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #608dfd;
+  color: var(--algoBlue);
 }
 ul,
 ol {
@@ -66,11 +71,14 @@ hr {
   width: 70px;
   text-align: center;
   position: relative;
-  background: #1e7a46;
+  background: var(--algoYellow);
   margin-bottom: 20px;
   border: 0;
 }
 /* Navigation */
+.logo {
+  max-width: 100px;
+}
 #menu {
   padding: 15px;
   transition: all 0.8s;
@@ -104,7 +112,7 @@ hr {
   bottom: -1px;
   width: 0;
   height: 2px;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  background: linear-gradient(to right, var(--algoBlue) 0%, #5ca9fb 100%);
   content: "";
   transition: width 0.2s;
 }
@@ -125,7 +133,7 @@ hr {
   bottom: -1px !important;
   width: 100% !important;
   height: 2px !important;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%) !important;
+  background: linear-gradient(to right, var(--algoBlue) 0%, #5ca9fb 100%) !important;
   content: "" !important;
   transition: width 0.2s !important;
 }
@@ -135,10 +143,10 @@ hr {
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
   background-color: #fff;
-  border-color: #608dfd;
+  border-color: var(--algoBlue);
 }
 .navbar-default .navbar-toggle:hover > .icon-bar {
-  background-color: #608dfd;
+  background-color: var(--algoBlue);
 }
 .section-title {
   margin-bottom: 70px;
@@ -152,7 +160,7 @@ hr {
 .section-title h2::after {
   position: absolute;
   content: "";
-  background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+  background: linear-gradient(to right, var(--algoBlue) 0%, #6372ff 100%);
   height: 4px;
   width: 60px;
   bottom: 0;
@@ -166,8 +174,8 @@ hr {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   color: #fff;
-  background-color: #5ca9fb;
-  background-image: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+  background-color: var(--algoBlue);
+  background-image: linear-gradient(to right, var(--algoBlue) 0%, #6372ff 100%);
   padding: 14px 34px;
   letter-spacing: 1px;
   margin: 0;
@@ -229,7 +237,7 @@ a:focus,
 }
 .intro h1 span {
   font-weight: 800;
-  color: #5ca9fb;
+  color: var(--algoBlue);
 }
 .intro p {
   color: #fff;
@@ -240,12 +248,13 @@ a:focus,
   margin-bottom: 60px;
 }
 header .intro-text {
-  padding-top: 350px;
+  padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
 }
 /* Features Section */
 #features {
+  padding: 40px;
   background: #f6f6f6;
 }
 #features i.fa {
@@ -257,7 +266,7 @@ header .intro-text {
   height: 100px;
   padding: 30px 0;
   border-radius: 50%;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  background: linear-gradient(to right, #6372ff 0%, var(--algoBlue) 100%);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
 }
 /* About Section */
@@ -310,7 +319,7 @@ header .intro-text {
 /* Services Section */
 #services {
   padding: 100px 0;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  background: linear-gradient(to right, #6372ff 0%, var(--algoBlue) 100%);
   color: #fff;
 }
 #services .service-desc {
@@ -334,7 +343,7 @@ header .intro-text {
   width: 120px;
   height: 120px;
   padding: 40px 0;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  background: linear-gradient(to right, #6372ff 0%, var(--algoBlue) 100%);
   border-radius: 50%;
   color: #fff;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
@@ -460,7 +469,7 @@ header .intro-text {
 /* Contact Section */
 #contact {
   padding: 100px 0 60px;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  background: linear-gradient(to right, #6372ff 0%, var(--algoBlue) 100%);
   color: rgba(255, 255, 255, 0.75);
 }
 #contact .section-title {
@@ -495,7 +504,7 @@ header .intro-text {
   padding-top: 20px;
 }
 #contact .text-danger {
-  color: #cc0033;
+  color: var(--algoRed);
   text-align: left;
 }
 #contact .btn-custom {
@@ -504,7 +513,7 @@ header .intro-text {
   border: 2px solid #fff;
 }
 #contact .btn-custom:hover {
-  color: #1f386e;
+  color: var(--algoBlue);
   background: #fff;
 }
 label {
@@ -580,7 +589,7 @@ label {
   transition: all 0.3s;
 }
 #contact .social i.fa:hover {
-  color: #608dfd;
+  color: var(--algoBlue);
   background: #fff;
 }
 /* Footer Section*/
@@ -593,10 +602,10 @@ label {
   font-size: 14px;
 }
 #footer a {
-  color: #608dfd;
+  color: var(--algoBlue);
 }
 #footer a:hover {
-  border-bottom: 2px solid #608dfd;
+  border-bottom: 2px solid var(--algoBlue);
 }
 
 @media (max-width: 768px) {
